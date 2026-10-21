@@ -11,19 +11,23 @@ NOTES = ROOT / "notes"
 
 # Sidebar order and short labels. Any new .md file not listed here is appended at the end.
 ORDER = [
-    ("README", "Home", ""),
-    ("ch01-basics-of-project-management", "Basics of PM, Traditional vs Agile", "01"),
-    ("ch02-agile-manifesto", "Agile Manifesto", "02"),
-    ("ch03-scrum-elements-and-terminology", "Scrum Elements & Terms", "03"),
-    ("ch04-project-initiation", "Project Initiation", "04"),
-    ("ch05-scrum-teams-roles-team-space", "Roles & Team Space", "05"),
-    ("ch06-scrum-planning", "Scrum Planning", "06"),
-    ("ch07-sprint-events-and-retrospective", "Sprint Events & Retro", "07"),
-    ("ch08-progress-tracking-burndown-burnup-cfd", "Burndown, Burnup, CFD", "08"),
-    ("ch09-xp-lean-kanban-tps", "XP, Lean, Kanban, TPS", "09"),
-    ("ch10-cases-agile-scrum-msp", "Cases & MS Project", "10"),
-    ("presentation-topics-qna", "14 Presentation Topics", "Q&A"),
-    ("quiz-bank-from-answer-keys", "Quiz Bank", "Quiz"),
+    # (slug, sidebar label, tag, group)
+    ("README", "About these notes", "", "start"),
+    ("rapid-revision", "Rapid Revision", "★", "start"),
+    ("ch01-basics-of-project-management", "Basics of PM, Traditional vs Agile", "01", "chapters"),
+    ("ch02-agile-manifesto", "Agile Manifesto", "02", "chapters"),
+    ("ch03-scrum-elements-and-terminology", "Scrum Elements & Terms", "03", "chapters"),
+    ("ch04-project-initiation", "Project Initiation", "04", "chapters"),
+    ("ch05-scrum-teams-roles-team-space", "Roles & Team Space", "05", "chapters"),
+    ("ch06-scrum-planning", "Scrum Planning", "06", "chapters"),
+    ("ch07-sprint-events-and-retrospective", "Sprint Events & Retro", "07", "chapters"),
+    ("ch08-progress-tracking-burndown-burnup-cfd", "Burndown, Burnup, CFD", "08", "chapters"),
+    ("ch09-xp-lean-kanban-tps", "XP, Lean, Kanban, TPS", "09", "chapters"),
+    ("ch10-cases-agile-scrum-msp", "Cases & MS Project", "10", "chapters"),
+    ("ch11-extra-topics", "Extra Topics", "11", "chapters"),
+    ("presentation-topics-qna", "14 Presentation Topics", "Q&A", "practice"),
+    ("quiz-bank-from-answer-keys", "Quiz Bank", "Quiz", "practice"),
+    ("glossary", "Glossary A–Z", "A–Z", "practice"),
 ]
 
 
@@ -35,14 +39,14 @@ def first_heading(md: str, fallback: str) -> str:
 def main() -> None:
     files = {p.stem: p for p in NOTES.glob("*.md")}
     entries = []
-    for slug, label, tag in ORDER:
+    for slug, label, tag, group in ORDER:
         if slug in files:
             md = files.pop(slug).read_text(encoding="utf-8")
-            entries.append({"slug": slug, "label": label, "tag": tag, "title": first_heading(md, label), "md": md})
+            entries.append({"slug": slug, "label": label, "tag": tag, "group": group, "title": first_heading(md, label), "md": md})
     for slug, path in sorted(files.items()):
         md = path.read_text(encoding="utf-8")
         title = first_heading(md, slug)
-        entries.append({"slug": slug, "label": title, "tag": "", "title": title, "md": md})
+        entries.append({"slug": slug, "label": title, "tag": "", "group": "practice", "title": title, "md": md})
 
     out = ROOT / "assets" / "notes.js"
     out.write_text("window.NOTES = " + json.dumps(entries, ensure_ascii=False) + ";\n", encoding="utf-8")

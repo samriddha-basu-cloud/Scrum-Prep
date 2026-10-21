@@ -19,8 +19,11 @@ Sem III MBA(OM) 25–27, Symbiosis Institute of Operations Management. Built fro
 | 8 | [Burndown, burnup, CFD](ch08-progress-tracking-burndown-burnup-cfd.md) | 7 Sprint (part 2) | ⭐⭐⭐ #4 Burndown and burnup; ⭐⭐⭐ #5 Cumulative flow diagrams |
 | 9 | [XP, Lean, Kanban, Toyota Production System](ch09-xp-lean-kanban-tps.md) | Learning objective (Scrum, Kanban, Lean); half the faculty deck | Presentation topic 14 (TPS) |
 | 10 | [Cases with Agile/Scrum using MSP](ch10-cases-agile-scrum-msp.md) | 8 Cases using MSP | Presentation topic 13 (college event case) |
+| 11 | [Extra topics beyond the slides](ch11-extra-topics.md) | Value-add for long answers | Other frameworks, scaling, Scrum Guide 2020, DoR vs DoD, technical debt, agile contracts, risk, AgileEVM, anti-patterns |
 
 ## Revision files
+- ⭐⭐⭐ [rapid-revision.md](rapid-revision.md) — the night-before sheet: every list, mnemonic, number, formula and diagram to practise.
+- [glossary.md](glossary.md) — about 150 definitions A–Z (also available as flashcards on the website).
 - ⭐⭐⭐ [presentation-topics-qna.md](presentation-topics-qna.md) — your important topic #9: all 14 presentation topics, each with planned questions and model answers.
 - [quiz-bank-from-answer-keys.md](quiz-bank-from-answer-keys.md) — every one-word, who-am-I, true/false, classify and match-the-following item from the faculty keys and crosswords, grouped by chapter.
 
