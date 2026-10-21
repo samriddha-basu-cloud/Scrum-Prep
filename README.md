@@ -49,10 +49,15 @@ Every time you push a change to GitHub, Vercel redeploys automatically.
 If you edit only on GitHub's website and can't run Python, upload the updated `assets/notes.js` as well, because the site reads from that file.
 
 ## Using the site
-- **Search anywhere:** press `/` or `Ctrl K` (`⌘K` on Mac) to jump to any chapter, section or definition, or to any sentence in the notes.
-- **Self-test:** turn on the Self-test switch to hide every Q&A answer behind a "Reveal answer" button.
-- **Flashcards:** every glossary definition as a flip card (Space to flip, arrow keys to move, Shuffle to mix).
+- **Search anywhere:** press `/` or `Ctrl K` (`⌘K` on Mac), or tap the search button on a phone, to jump to any chapter, section, definition or sentence.
+- **Quiz mode:** 10 random multiple-choice questions from the glossary (definition → term, or term → definition), with a score ring, a review of misses and your best score saved.
+- **Saved:** bookmark whole pages (☆ Save or `B`) or single sections (bookmark icon next to a heading); they appear under Saved.
+- **Continue reading:** the home page takes you back to the chapter and scroll position you left.
+- **Self-test:** hides every Q&A answer behind a "Reveal answer" button.
+- **Flashcards:** every definition as a flip card (tap or Space to flip, swipe or arrow keys to move, Shuffle to mix).
 - **Glossary:** about 150 definitions with A–Z filters and instant search.
-- **Progress:** mark chapters as done; progress is saved in your browser.
+- **Settings (sliders icon):** dark/light theme, text size, self-test, focus mode (hides the side panels), keyboard shortcuts, and reset.
+- **Progress:** mark chapters as done; progress, bookmarks and settings are saved in your browser.
+- **Phone layout:** bottom tab bar (Home, Chapters, Search, Quiz, Saved), a slide-in chapter drawer and a collapsible "On this page" list.
+- **Keyboard:** `J`/`K` next/previous chapter, `T` self-test, `F` focus, `B` save, `D` done, `G` then `H` home, `?` lists them all.
 - **Labels:** High-yield / Important pills mark exam priority; Slides / Textbook chips show where each point comes from.
-- Light and dark themes, a reading-progress bar, an "On this page" panel, and print-friendly pages.
